@@ -1,8 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
 
-import { addAction } from "../actions/addAction";
-import { subtractAction } from "../actions/subtractAction";
+import addAction from "../actions/addAction";
+import subtractAction from "../actions/subtractAction";
 
 class App extends React.Component<any, any>{
     constructor(props: any) {
@@ -13,11 +13,11 @@ class App extends React.Component<any, any>{
     }
 
     add() {
-        this.props.add(1);
+        this.props.add(this.props.result, 1);
     }
 
     subtract() {
-        this.props.subtract(1);
+        this.props.subtract(this.props.result, 1);
     }
 
     render() {
@@ -37,8 +37,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        add: num => dispatch(addAction(num)),
-        subtract: num => dispatch(subtractAction(num))
+        add: (currentResult, num) => dispatch(addAction(currentResult, num)),
+        subtract: (currentResult, num) => dispatch(subtractAction(currentResult, num))
     }
 }
 

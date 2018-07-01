@@ -4,6 +4,8 @@
   "description": "A Node, React application with react-redux and redux-thunk",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
