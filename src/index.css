@@ -15,7 +15,6 @@ div .container {
 
 @media (max-width: 768px) {
     div .container {
-        display: flex;
         flex-direction: column;
     }
 }
@@ -26,28 +25,21 @@ div .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 div .box button {
     height: 100px;
     width: 100px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
     font-size: larger;
 }
 
 div .box label {
     height: 100px;
     width: 100px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: center;
     font-size: xx-large;
     color: white;
 }
