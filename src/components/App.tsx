@@ -22,8 +22,10 @@ class App extends React.Component<any, any>{
 
     render() {
         return (
-            <div>
-                <button onClick={this.subtract}>-</button>{this.props.result}<button onClick={this.add}>+</button>
+            <div className="container">
+                <div className="box"><button onClick={this.subtract}>-</button></div>
+                <div className="box"><label className={this.props.lableStyle}>{this.props.result}</label></div>
+                <div className="box"><button onClick={this.add}>+</button></div>
             </div>
         )
     }
@@ -31,6 +33,7 @@ class App extends React.Component<any, any>{
 
 const mapStateToProps = (state) => {
     return {
+        lableStyle: state.result >= 0 ? "boxPos" : "boxNeg",
         result: state.result
     }
 }

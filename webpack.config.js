@@ -14,7 +14,11 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: "ts-loader"
+                loader: "ts-loader"
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             }
         ]
     }
