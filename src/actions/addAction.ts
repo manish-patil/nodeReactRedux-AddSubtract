@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default function addAction(currentResult, num) {
     return (dispatch) => {
-        axios.post("/add", {
+        return axios.post("/add", {
             "currentResult": currentResult,
             "numberToAdd": num
         }).then((response) => {

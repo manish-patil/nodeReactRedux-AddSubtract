@@ -4,6 +4,9 @@
   "description": "A Node, React application with react-redux and redux-thunk",
   "main": "index.js",
   "dependencies": {
+    "@types/react": "^16.4.2",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-redux": "^6.0.3",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
@@ -15,21 +18,27 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@types/react": "^16.4.2",
-    "@types/react-dom": "^16.0.6",
-    "@types/react-redux": "^6.0.3",
+    "@types/enzyme": "^3.1.14",
+    "@types/jest": "^23.3.5",
+    "axios-mock-adapter": "^1.15.0",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
     "nodemon": "^1.17.5",
+    "redux-mock-store": "^1.5.3",
     "style-loader": "^0.21.0",
+    "ts-jest": "^23.10.4",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
     "webpack": "^4.12.1",
     "webpack-cli": "^3.0.8"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-node": "nodemon server.js",
-    "build-webpack": "webpack-cli"
+    "build-webpack": "webpack-cli",
+    "test": "jest --colors"
   },
   "repository": {
     "type": "git",
